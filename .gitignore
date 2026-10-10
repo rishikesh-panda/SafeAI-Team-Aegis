@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+backend/model.joblib
+backend/safeai.db
+.env
