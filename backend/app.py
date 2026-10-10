@@ -184,8 +184,9 @@ def predict():
         return jsonify(id=aid,created=now,venue=venue,risk=risk,score=score,confidence=confidence,resources=resources,
                        note="Synthetic-data academic demo only; not for real safety decisions.")
     except (ValueError,KeyError,TypeError) as e: return jsonify(error=str(e)),400
-if __name__=="__main__":
-    m,a,n=get_model(); print(f"SafeAI ready: {n} synthetic rows; holdout accuracy {a*100:.1f}%")
-    app.run(host="127.0.0.1",port=5000,debug=False)
+if __name__ == "__main__":
+    m, a, n = get_model()
+    print(f"SafeAI ready: {n} synthetic rows; holdout accuracy {a*100:.1f}%")
+    app.run(host="127.0.0.1", port=5000, debug=False)
 
     # installed packages: flask, pandas, scikit-learn, joblib
