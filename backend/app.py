@@ -187,3 +187,5 @@ def predict():
 if __name__=="__main__":
     m,a,n=get_model(); print(f"SafeAI ready: {n} synthetic rows; holdout accuracy {a*100:.1f}%")
     app.run(host="127.0.0.1",port=5000,debug=False)
+
+    # installed packages: flask, pandas, scikit-learn, joblib
